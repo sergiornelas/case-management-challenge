@@ -4,9 +4,9 @@ import { FaRegFileLines } from "react-icons/fa6";
 import { LuUserSearch } from "react-icons/lu";
 import {
   MdAddBusiness,
-  MdMenu,
   MdOutlineAutoAwesomeMosaic,
   MdOutlineCalendarMonth,
+  MdOutlineFormatLineSpacing,
   MdOutlineLogout,
   MdOutlinePersonAddAlt,
   MdOutlineSettingsAccessibility,
@@ -19,7 +19,7 @@ import styles from "./Sidebar.module.css";
 
 export const Sidebar = () => {
   const topIconsMenu = [
-    { path: "/", icon: <MdMenu color="#423fbd" /> },
+    { path: "/", icon: <MdOutlineFormatLineSpacing color="#423fbd" /> },
     { path: "/cases", icon: <MdOutlineAutoAwesomeMosaic /> },
     { path: "/clients", icon: <LuUserSearch /> },
     { path: "/staff", icon: <MdOutlinePersonAddAlt /> },

@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "../Sidebar/Sidebar";
+import { Header } from "../Header/Header";
 import styles from "./MainLayout.module.css";
 
 export const MainLayout = () => {
@@ -7,9 +8,7 @@ export const MainLayout = () => {
     <div>
       <Sidebar />
       <div className={styles.content}>
-        <header className={styles.header}>
-          <h1>ABC Company</h1>
-        </header>
+        <Header />
         <main className={styles.main}>
           <Outlet />
         </main>

@@ -1,23 +1,5 @@
 .content {
-  flex: 1;
-  margin-left: 60px;
-}
-
-.header {
-  padding-top: 0.5rem;
-  padding-left: 0.7rem;
-  background-color: #3d38a8;
-  border-bottom: 8px solid #e07236;
-  color: white;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 400;
-  background-color: #4f2cbf;
-  display: inline-block;
-  padding: 0.5rem 12rem 0.5rem 0;
+  margin-left: 47px;
 }
 
 .main {
