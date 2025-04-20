@@ -1,0 +1,7 @@
+.page {
+  border-radius: 12px;
+  box-shadow: 2px 8px 40px rgba(50, 136, 252, 0.15);
+  background-color: white;
+  padding: 24px;
+  margin: 24px;
+}

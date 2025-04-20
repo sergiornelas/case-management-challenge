@@ -1,0 +1,23 @@
+.layout {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
