@@ -17,7 +17,7 @@ export const useCaseStore = create<FilterState>((set, get) => ({
   searchTerm: "",
   debouncedSearchTerm: "",
   setSearchTerm: (term) => {
-    set({ searchTerm: term });
+    set({ searchTerm: term, currentPage: 1 });
     debounce(() => {
       set({ debouncedSearchTerm: term });
     }, 300);

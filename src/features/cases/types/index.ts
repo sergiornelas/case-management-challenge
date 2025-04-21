@@ -3,6 +3,7 @@ import { expenses } from "@cases/utils/mockExpenses";
 export type MedicalStatus = "Ready for Assignment" | "Signed" | "Scheduled";
 export type CaseStatus = "Active" | "Pending" | "In Progress";
 export type DetailsTab = "details" | "expenses";
+export type DeductedFrom = "Not Deducted" | "Client Settlement";
 
 export type Case = {
   id: string;
@@ -11,6 +12,13 @@ export type Case = {
   medical_status: MedicalStatus;
   client_status: CaseStatus;
   law_firm: string;
+};
+
+export type CaseExpense = {
+  id: number;
+  label: string;
+  amount: number;
+  deductedFrom: DeductedFrom;
 };
 
 export interface CasePaginationProps {

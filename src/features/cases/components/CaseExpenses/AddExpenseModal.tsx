@@ -1,5 +1,5 @@
 import { useExpenseStore } from "@cases/store/expenseStore";
-import { AddExpenseModalProps } from "@cases/types";
+import { AddExpenseModalProps, DeductedFrom } from "@cases/types";
 import { NOT_DEDUCTED } from "@cases/utils/constants";
 import { useState } from "react";
 import styles from "./AddExpenseModal.module.css";
@@ -19,7 +19,7 @@ export default function AddExpenseModal({
       id: Date.now(),
       label,
       amount: parseFloat(amount),
-      deductedFrom,
+      deductedFrom: deductedFrom as DeductedFrom,
     };
     addExpense(newExpense);
     onClose();
@@ -53,7 +53,6 @@ export default function AddExpenseModal({
               >
                 <option value={NOT_DEDUCTED}>Not Deducted</option>
                 <option value="Client Settlement">Client Settlement</option>
-                <option value="Attorney Fee">Attorney Fee</option>
               </select>
             </div>
 

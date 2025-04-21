@@ -1,4 +1,6 @@
-export const expenses = [
+import { CaseExpense } from "@cases/types";
+
+export const expenses: CaseExpense[] = [
   {
     id: 1,
     label: "Lyft 05/12/2024",
