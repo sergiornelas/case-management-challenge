@@ -17,7 +17,7 @@ The application includes:
 
 ## Project Structure
 
-<img width="1450" height="200" alt="image" src="project_structure.png">
+<img width="500" height="400" alt="image" src="project_structure.png">
 
 ## Screenshots
 
