@@ -1,7 +1,8 @@
-import { useState } from "react";
-import styles from "./AddExpenseModal.module.css";
 import { useExpenseStore } from "@cases/store/expenseStore";
 import { AddExpenseModalProps } from "@cases/types";
+import { NOT_DEDUCTED } from "@cases/utils/constants";
+import { useState } from "react";
+import styles from "./AddExpenseModal.module.css";
 
 export default function AddExpenseModal({
   isOpen,
@@ -9,7 +10,7 @@ export default function AddExpenseModal({
 }: AddExpenseModalProps) {
   const [label, setLabel] = useState("");
   const [amount, setAmount] = useState("");
-  const [deductedFrom, setDeductedFrom] = useState("Not Deducted");
+  const [deductedFrom, setDeductedFrom] = useState(NOT_DEDUCTED);
   const { addExpense } = useExpenseStore();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -28,7 +29,7 @@ export default function AddExpenseModal({
   const resetForm = () => {
     setLabel("");
     setAmount("");
-    setDeductedFrom("Not Deducted");
+    setDeductedFrom(NOT_DEDUCTED);
   };
 
   if (!isOpen) return null;
@@ -50,7 +51,7 @@ export default function AddExpenseModal({
                 value={deductedFrom}
                 onChange={(e) => setDeductedFrom(e.target.value)}
               >
-                <option value="Not Deducted">Not Deducted</option>
+                <option value={NOT_DEDUCTED}>Not Deducted</option>
                 <option value="Client Settlement">Client Settlement</option>
                 <option value="Attorney Fee">Attorney Fee</option>
               </select>

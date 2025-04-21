@@ -13,7 +13,7 @@ const createDebounce = () => {
 const debounce = createDebounce();
 
 export const useCaseStore = create<FilterState>((set, get) => ({
-  // Search state
+  // Search state ==========================
   searchTerm: "",
   debouncedSearchTerm: "",
   setSearchTerm: (term) => {
@@ -23,18 +23,18 @@ export const useCaseStore = create<FilterState>((set, get) => ({
     }, 300);
   },
 
-  // Filter state
+  // Filter state ==========================
   statusFilter: "All",
   setStatusFilter: (status) => {
     set({ statusFilter: status, currentPage: 1 });
   },
 
-  // Pagination state
+  // Pagination state ==========================
   currentPage: 1,
   setCurrentPage: (page) => set({ currentPage: page }),
   itemsPerPage: ITEMS_PER_PAGE,
 
-  // Computed values
+  // Computed values ==========================
   getFilteredAndPaginatedItems: (items) => {
     const { debouncedSearchTerm, statusFilter, currentPage, itemsPerPage } =
       get();

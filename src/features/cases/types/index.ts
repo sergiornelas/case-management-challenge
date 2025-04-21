@@ -49,21 +49,14 @@ export interface CaseState {
 }
 
 export interface FilterState {
-  // Search state
   searchTerm: string;
   debouncedSearchTerm: string;
   setSearchTerm: (term: string) => void;
-
-  // Filter state
   statusFilter: string;
   setStatusFilter: (status: string) => void;
-
-  // Pagination state
   currentPage: number;
   setCurrentPage: (page: number) => void;
   itemsPerPage: number;
-
-  // Computed values
   getFilteredAndPaginatedItems: (items: Case[]) => {
     items: Case[];
     totalItems: number;

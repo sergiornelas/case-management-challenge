@@ -8,6 +8,8 @@ export default function CaseTable({
   filteredCases: Case[];
 }) {
   const navigate = useNavigate();
+  const noClients = filteredCases.length === 0;
+
   return (
     <table className={styles.table}>
       <thead>
@@ -20,20 +22,26 @@ export default function CaseTable({
         </tr>
       </thead>
       <tbody>
-        {filteredCases.map((caseItem: Case) => (
-          <tr
-            key={caseItem.id}
-            onClick={() => navigate(`/cases/${caseItem.id}`)}
-            className={styles.tableRow}
-          >
-            <td>{`${caseItem.id}. ${caseItem.client_name}`}</td>
-            {/* workaround to create dates: */}
-            <td>{new Date(caseItem.doa).toLocaleDateString()}</td>
-            <td>{caseItem.medical_status}</td>
-            <td>{caseItem.client_status}</td>
-            <td>{caseItem.law_firm}</td>
+        {noClients ? (
+          <tr>
+            <td colSpan={5}>No clients found</td>
           </tr>
-        ))}
+        ) : (
+          filteredCases.map((caseItem: Case) => (
+            <tr
+              key={caseItem.id}
+              onClick={() => navigate(`/cases/${caseItem.id}`)}
+              className={styles.tableRow}
+            >
+              <td>{`${caseItem.id}. ${caseItem.client_name}`}</td>
+              {/* dates workaround: */}
+              <td>{new Date(caseItem.doa).toLocaleDateString()}</td>
+              <td>{caseItem.medical_status}</td>
+              <td>{caseItem.client_status}</td>
+              <td>{caseItem.law_firm}</td>
+            </tr>
+          ))
+        )}
       </tbody>
     </table>
   );
