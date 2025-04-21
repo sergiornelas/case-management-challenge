@@ -10,3 +10,24 @@ export type Case = {
   client_status: CaseStatus;
   law_firm: string;
 };
+
+export interface CasePaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
+export interface UsePaginationProps {
+  items: Case[];
+  itemsPerPage?: number;
+}
+
+export interface CaseSearchClientsProps {
+  searchTerm: string;
+  setSearchTerm: (term: string) => void;
+}
+
+export interface CaseButtonsProps {
+  statusFilter: MedicalStatus | "All";
+  setStatusFilter: (status: MedicalStatus | "All") => void;
+}

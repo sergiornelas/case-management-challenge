@@ -1,7 +1,11 @@
 import styles from "./CaseButtons.module.css";
 import { MedicalStatus } from "@cases/types";
+import { CaseButtonsProps } from "@cases/types";
 
-export default function CaseButtons({ statusFilter, setStatusFilter }) {
+export default function CaseButtons({
+  statusFilter,
+  setStatusFilter,
+}: CaseButtonsProps) {
   return (
     <div className={styles.buttonsContainer}>
       <select
@@ -16,7 +20,12 @@ export default function CaseButtons({ statusFilter, setStatusFilter }) {
         <option value="Pending">Pending</option>
         <option value="In Progress">In Progress</option>
       </select>
-      <button className={styles.listButton}>+ Add Client</button>
+      <button
+        className={styles.listButton}
+        onClick={() => alert("Not implemented")}
+      >
+        + Add Client
+      </button>
     </div>
   );
 }

@@ -1,6 +1,10 @@
 import styles from "./CaseSearchClients.module.css";
+import { CaseSearchClientsProps } from "@cases/types";
 
-export default function CaseSearchClients({ searchTerm, setSearchTerm }) {
+export default function CaseSearchClients({
+  searchTerm,
+  setSearchTerm,
+}: CaseSearchClientsProps) {
   return (
     <div className={styles.header}>
       <h2 className={styles.title}>Clients</h2>
