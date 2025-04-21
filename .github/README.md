@@ -14,6 +14,15 @@ The application includes:
 - State management with Zustand.
 - Routing with React Router.
 - UI consistency. Even if we don't have a Figma design, we follow the images guidelines.
+- Absolute imports with vite-tsconfig-paths.
+
+## Installation
+
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the application using `npm run dev`.
+4. Open your browser and navigate to the specified localhost URL.
+5. Enjoy 😈
 
 ## Screenshots
 
