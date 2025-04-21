@@ -24,7 +24,7 @@ The application includes:
 4. Open your browser and navigate to the specified localhost URL.
 5. Enjoy 😈
 
-## Deployed app web site
+## Deployed app website
 
 <https://68064a8990e7b510826ff87e--casemanagementchallengesergio.netlify.app/>
 
