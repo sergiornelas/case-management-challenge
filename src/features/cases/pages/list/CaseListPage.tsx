@@ -4,6 +4,7 @@ import CaseSearchClients from "@cases/components/CaseList/CaseSearchClients/Case
 import CaseTable from "@cases/components/CaseList/CaseTable/CaseTable";
 import { usePagination } from "@cases/hooks/usePagination";
 import { mockCases } from "@cases/utils/mockCases";
+import { MedicalStatus } from "@cases/types";
 import styles from "./CaseListPage.module.css";
 
 export const CaseListPage = () => {
@@ -21,7 +22,7 @@ export const CaseListPage = () => {
         setSearchTerm={search.setTerm}
       />
       <CaseButtons
-        statusFilter={filter.status}
+        statusFilter={filter.status as "All" | MedicalStatus}
         setStatusFilter={filter.setStatus}
       />
       <CaseTable filteredCases={paginatedCases} />

@@ -1,5 +1,6 @@
 import styles from "./CasePagination.module.css";
 import { CasePaginationProps } from "@cases/types";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function CasePagination({
   currentPage,
@@ -30,7 +31,7 @@ export default function CasePagination({
           onClick={() => onPageChange(i)}
         >
           {i}
-        </button>,
+        </button>
       );
     }
     return pages;
@@ -43,7 +44,7 @@ export default function CasePagination({
         onClick={handlePrevious}
         disabled={currentPage === 1}
       >
-        &lt;
+        <FaArrowLeft />
       </button>
       <div className={styles.pageNumbers}>{renderPageNumbers()}</div>
       <button
@@ -51,7 +52,7 @@ export default function CasePagination({
         onClick={handleNext}
         disabled={currentPage === totalPages}
       >
-        &gt;
+        <FaArrowRight />
       </button>
     </div>
   );

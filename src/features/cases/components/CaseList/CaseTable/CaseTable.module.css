@@ -43,9 +43,5 @@
 
 .tableRow:hover {
   cursor: pointer;
-  background-color: #e5eaef;
-}
-
-.tableRowReady {
   background-color: #def7eb;
 }

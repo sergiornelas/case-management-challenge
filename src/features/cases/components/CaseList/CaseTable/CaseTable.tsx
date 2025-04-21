@@ -1,7 +1,6 @@
 import { Case } from "@cases/types";
 import { useNavigate } from "react-router-dom";
 import styles from "./CaseTable.module.css";
-import { READY } from "@cases/utils/constants";
 
 export default function CaseTable({
   filteredCases,
@@ -25,9 +24,7 @@ export default function CaseTable({
           <tr
             key={caseItem.id}
             onClick={() => navigate(`/cases/${caseItem.id}`)}
-            className={`${styles.tableRow} ${
-              caseItem.medical_status === READY ? styles.tableRowReady : ""
-            }`}
+            className={styles.tableRow}
           >
             <td>{`${index + 1}. ${caseItem.client_name}`}</td>
             {/* workaround to create dates: */}
