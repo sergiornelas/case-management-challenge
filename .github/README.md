@@ -15,11 +15,11 @@ The application includes:
 - Routing with React Router.
 - UI consistency. Even if we don't have a Figma design, we follow the images guidelines.
 
-## Project Structure
-
-<img width="200" height="600" alt="image" src="project_structure.png">
-
 ## Screenshots
 
 <img width="1450" alt="image" src="case_list.png">
 <img width="1450" alt="image" src="expenses_modal.png">
+
+## Project Structure
+
+<img width="300" height="600" alt="image" src="project_structure.png">
