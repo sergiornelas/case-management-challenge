@@ -34,7 +34,7 @@ export const CaseDetailPage = () => {
         {activeTab === DETAILS ? (
           <CaseDetails caseId={id!} />
         ) : (
-          <CaseExpenses caseId={id!} />
+          <CaseExpenses />
         )}
       </div>
     </div>
