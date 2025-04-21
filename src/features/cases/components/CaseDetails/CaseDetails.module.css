@@ -6,6 +6,18 @@
   margin-bottom: 24px;
 }
 
+.fieldTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+label {
+  color: #333;
+  font-size: 14px;
+}
+
 .field label {
   color: #666;
   font-size: 14px;
@@ -13,20 +25,11 @@
   display: block;
 }
 
-.value {
-  font-size: 16px;
+.lawFirm {
+  padding-right: 70%;
+}
+
+.lawFirm .icon {
   color: #333;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.icon {
-  font-size: 20px;
-}
-
-.caseNumber {
-  margin-top: 4px;
-  color: #666;
-  font-size: 14px;
+  font-size: 18px;
 }

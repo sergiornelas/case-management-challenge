@@ -1,46 +1,53 @@
 .page {
+  height: 94vh;
+  background-image: url("/notebook-wallpaper.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  background-color: #fff;
-  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .tabs {
   display: flex;
   gap: 0;
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 24px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .tab {
   padding: 12px 24px;
   font-size: 16px;
-  background: none;
+  background: transparent;
+  font-weight: 900;
   border: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   cursor: pointer;
-  color: #666;
   position: relative;
-  transition: color 0.2s;
+  transition: all 0.2s;
+  margin-right: 4px;
 }
 
 .tab:hover {
-  color: #333;
+  background: #f0f0f0;
 }
 
 .tab.active {
-  color: #6b46c1;
-  font-weight: 500;
-}
-
-.tab.active::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #6b46c1;
+  background: white;
+  color: #9333ea;
+  font-weight: 900;
 }
 
 .content {
-  padding: 20px 0;
+  background: white;
+  padding: 24px;
+  border-radius: 0 8px 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  overflow: auto;
 }

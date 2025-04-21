@@ -1,7 +1,3 @@
-.container {
-  padding: 20px;
-}
-
 .header {
   display: flex;
   justify-content: flex-end;
@@ -14,49 +10,48 @@
 }
 
 .deleteButton {
-  padding: 8px 16px;
+  padding: 0.5rem 2rem;
   background-color: #dc2626;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.62rem;
 }
 
 .addButton {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   background-color: white;
   color: #2563eb;
   border: 1px solid #2563eb;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.62rem;
+}
+
+.oddRows {
+  background-color: #f1f2f4;
 }
 
 .table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 0.82rem;
 }
 
 .table th,
 .table td {
   padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #e5e7eb;
 }
 
 .table th {
-  font-weight: 500;
+  font-weight: 800;
   color: #374151;
-  background-color: #f9fafb;
 }
 
 .table tbody tr:hover {
-  background-color: #f9fafb;
-}
-
-.checkboxColumn {
-  width: 40px;
+  background-color: #def7eb;
 }
 
 .table input[type="checkbox"] {

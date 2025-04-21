@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
-import { useState } from "react";
-import CaseDetails from "../../components/CaseDetails/CaseDetails";
-import CaseExpenses from "../../components/CaseExpenses/CaseExpenses";
-import styles from "./CaseDetailPage.module.css";
+import CaseDetails from "@cases/components/CaseDetails/CaseDetails";
+import CaseExpenses from "@cases/components/CaseExpenses/CaseExpenses";
 import { DetailsTab } from "@cases/types";
 import { DETAILS } from "@cases/utils/constants";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import styles from "./CaseDetailPage.module.css";
 
 export const CaseDetailPage = () => {
   const { id } = useParams();
