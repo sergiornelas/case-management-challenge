@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./AddExpenseModal.module.css";
-import { useCaseStore } from "@cases/store/caseStore";
+import { useExpenseStore } from "@cases/store/expenseStore";
 import { AddExpenseModalProps } from "@cases/types";
 
 export default function AddExpenseModal({
@@ -10,7 +10,7 @@ export default function AddExpenseModal({
   const [label, setLabel] = useState("");
   const [amount, setAmount] = useState("");
   const [deductedFrom, setDeductedFrom] = useState("Not Deducted");
-  const { addExpense } = useCaseStore();
+  const { addExpense } = useExpenseStore();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

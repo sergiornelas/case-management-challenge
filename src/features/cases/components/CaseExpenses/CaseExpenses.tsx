@@ -1,12 +1,12 @@
 import styles from "./CaseExpenses.module.css";
 import { useState } from "react";
 import AddExpenseModal from "./AddExpenseModal";
-import { useCaseStore } from "@cases/store/caseStore";
+import { useExpenseStore } from "@cases/store/expenseStore";
 
 export default function CaseExpenses() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedExpenses, setSelectedExpenses] = useState<number[]>([]);
-  const { expenses, deleteExpenses } = useCaseStore();
+  const { expenses, deleteExpenses } = useExpenseStore();
 
   const handleDelete = () => {
     deleteExpenses(selectedExpenses);
@@ -17,7 +17,7 @@ export default function CaseExpenses() {
     setSelectedExpenses((prev) =>
       prev.includes(expenseId)
         ? prev.filter((id) => id !== expenseId)
-        : [...prev, expenseId]
+        : [...prev, expenseId],
     );
   };
 

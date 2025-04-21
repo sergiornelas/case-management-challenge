@@ -4,7 +4,7 @@ import CaseSearchClients from "@cases/components/CaseList/CaseSearchClients/Case
 import CaseTable from "@cases/components/CaseList/CaseTable/CaseTable";
 import { mockCases } from "@cases/utils/mockCases";
 import { MedicalStatus } from "@cases/types";
-import { useFilterStore } from "@cases/store/filterStore";
+import { useCaseStore } from "@cases/store/caseStore";
 import styles from "./CaseListPage.module.css";
 
 export const CaseListPage = () => {
@@ -16,7 +16,7 @@ export const CaseListPage = () => {
     currentPage,
     setCurrentPage,
     getFilteredAndPaginatedItems,
-  } = useFilterStore();
+  } = useCaseStore();
 
   const { items: paginatedCases, totalPages } =
     getFilteredAndPaginatedItems(mockCases);

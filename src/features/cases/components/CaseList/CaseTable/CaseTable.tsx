@@ -20,13 +20,13 @@ export default function CaseTable({
         </tr>
       </thead>
       <tbody>
-        {filteredCases.map((caseItem: Case, index: number) => (
+        {filteredCases.map((caseItem: Case) => (
           <tr
             key={caseItem.id}
             onClick={() => navigate(`/cases/${caseItem.id}`)}
             className={styles.tableRow}
           >
-            <td>{`${index + 1}. ${caseItem.client_name}`}</td>
+            <td>{`${caseItem.id}. ${caseItem.client_name}`}</td>
             {/* workaround to create dates: */}
             <td>{new Date(caseItem.doa).toLocaleDateString()}</td>
             <td>{caseItem.medical_status}</td>
