@@ -1,6 +1,6 @@
 import { UsePaginationProps } from "@cases/types";
 import { ITEMS_PER_PAGE } from "@cases/utils/constants";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 
 export const usePagination = ({
   items,
@@ -8,13 +8,23 @@ export const usePagination = ({
 }: UsePaginationProps) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("All");
+
+  // Debounce
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearchTerm(searchTerm);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
 
   const filteredAndPaginatedItems = useMemo(() => {
     const filtered = items.filter((item) => {
       const matchesSearch = item.client_name
         .toLowerCase()
-        .includes(searchTerm.toLowerCase());
+        .includes(debouncedSearchTerm.toLowerCase());
       const matchesStatus =
         statusFilter === "All" || item.client_status === statusFilter;
       return matchesSearch && matchesStatus;
@@ -26,7 +36,7 @@ export const usePagination = ({
       totalItems: filtered.length,
       totalPages: Math.ceil(filtered.length / itemsPerPage),
     };
-  }, [items, searchTerm, statusFilter, currentPage, itemsPerPage]);
+  }, [items, debouncedSearchTerm, statusFilter, currentPage, itemsPerPage]);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
