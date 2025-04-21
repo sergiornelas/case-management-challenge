@@ -15,6 +15,7 @@ The application includes:
 - Routing with `React Router`.
 - UI consistency. Even if we don't have a Figma design, we follow the images guidelines.
 - Absolute imports with vite-tsconfig-paths.
+- Pure CSS for styling (modules). I'm a big fan of Tailwind, but writing CSS sometimes is a good way to keep my styling knowledge fresh.
 
 ## Installation
 

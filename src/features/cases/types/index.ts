@@ -47,6 +47,18 @@ export interface AddExpenseModalProps {
   onClose: () => void;
 }
 
+export interface CaseExpensesTableProps {
+  expenses: CaseExpense[];
+  handleCheckboxChange: (id: number) => void;
+  selectedExpenses: Array<number>;
+}
+
+export interface CaseExpensesButtonsProps {
+  handleDelete: () => void;
+  selectedExpenses: Array<number>;
+  setIsModalOpen: (isOpen: boolean) => void;
+}
+
 export interface CaseState {
   cases: Case[];
   expenses: typeof expenses;

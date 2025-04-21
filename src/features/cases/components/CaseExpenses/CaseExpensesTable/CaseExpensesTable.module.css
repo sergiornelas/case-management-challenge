@@ -1,0 +1,32 @@
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.82rem;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.table th {
+  font-weight: 800;
+  color: #374151;
+}
+
+.table tbody tr:hover {
+  background-color: #def7eb;
+}
+
+.table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.oddRows {
+  background-color: #f1f2f4;
+}
