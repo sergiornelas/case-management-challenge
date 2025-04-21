@@ -1,16 +1,7 @@
-import { create } from "zustand";
-import { Case } from "@cases/types";
+import { CaseState } from "@cases/types";
 import { mockCases } from "@cases/utils/mockCases";
 import { expenses } from "@cases/utils/mockExpenses";
-
-interface CaseState {
-  cases: Case[];
-  expenses: typeof expenses;
-  selectedCaseId: string | null;
-  setSelectedCaseId: (id: string | null) => void;
-  addExpense: (expense: (typeof expenses)[0]) => void;
-  deleteExpenses: (expenseIds: number[]) => void;
-}
+import { create } from "zustand";
 
 export const useCaseStore = create<CaseState>((set) => ({
   cases: mockCases,

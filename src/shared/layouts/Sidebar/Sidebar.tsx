@@ -17,26 +17,27 @@ import { Link } from "react-router-dom";
 import styles from "./Sidebar.module.css";
 
 export const Sidebar = () => {
+  // Of course we can implement more paths in the future.
   const topIconsMenu = [
     { path: "/", icon: <MdOutlineFormatLineSpacing color="#423fbd" /> },
-    { path: "/cases", icon: <MdOutlineAutoAwesomeMosaic /> },
-    { path: "/clients", icon: <LuUserSearch /> },
-    { path: "/staff", icon: <MdOutlinePersonAddAlt /> },
-    { path: "/calendar", icon: <MdAddBusiness /> },
-    { path: "/firms", icon: <MdOutlineCalendarMonth /> },
-    { path: "/tasks", icon: <TbReportAnalytics /> },
+    { path: "/", icon: <MdOutlineAutoAwesomeMosaic /> },
+    { path: "/", icon: <LuUserSearch /> },
+    { path: "/", icon: <MdOutlinePersonAddAlt /> },
+    { path: "/", icon: <MdAddBusiness /> },
+    { path: "/", icon: <MdOutlineCalendarMonth /> },
+    { path: "/", icon: <TbReportAnalytics /> },
     {
-      path: "/reports",
+      path: "/",
       icon: <MdOutlineSettingsAccessibility />,
     },
-    { path: "/apps", icon: <FaRegFileLines /> },
-    { path: "/tasks", icon: <RiErrorWarningFill /> },
+    { path: "/", icon: <FaRegFileLines /> },
+    { path: "/", icon: <RiErrorWarningFill /> },
   ];
 
   const bottomIconsMenu = [
-    { path: "/share", icon: <FaUserFriends /> },
-    { path: "/account", icon: <BiSolidUser /> },
-    { path: "/logout", icon: <MdOutlineLogout color="#d66b65" /> },
+    { path: "/", icon: <FaUserFriends /> },
+    { path: "/", icon: <BiSolidUser /> },
+    { path: "/", icon: <MdOutlineLogout color="#d66b65" /> },
   ];
 
   return (

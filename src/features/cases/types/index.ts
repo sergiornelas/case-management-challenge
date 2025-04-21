@@ -1,3 +1,5 @@
+import { expenses } from "@cases/utils/mockExpenses";
+
 export type MedicalStatus = "Ready for Assignment" | "Signed" | "Scheduled";
 export type CaseStatus = "Active" | "Pending" | "In Progress";
 export type DetailsTab = "details" | "expenses";
@@ -35,4 +37,36 @@ export interface CaseButtonsProps {
 export interface AddExpenseModalProps {
   isOpen: boolean;
   onClose: () => void;
+}
+
+export interface CaseState {
+  cases: Case[];
+  expenses: typeof expenses;
+  selectedCaseId: string | null;
+  setSelectedCaseId: (id: string | null) => void;
+  addExpense: (expense: (typeof expenses)[0]) => void;
+  deleteExpenses: (expenseIds: number[]) => void;
+}
+
+export interface FilterState {
+  // Search state
+  searchTerm: string;
+  debouncedSearchTerm: string;
+  setSearchTerm: (term: string) => void;
+
+  // Filter state
+  statusFilter: string;
+  setStatusFilter: (status: string) => void;
+
+  // Pagination state
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
+  itemsPerPage: number;
+
+  // Computed values
+  getFilteredAndPaginatedItems: (items: Case[]) => {
+    items: Case[];
+    totalItems: number;
+    totalPages: number;
+  };
 }

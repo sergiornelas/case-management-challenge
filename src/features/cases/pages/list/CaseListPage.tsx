@@ -2,34 +2,40 @@ import CaseButtons from "@cases/components/CaseList/CaseButtons/CaseButtons";
 import CasePagination from "@cases/components/CaseList/CasePagination/CasePagination";
 import CaseSearchClients from "@cases/components/CaseList/CaseSearchClients/CaseSearchClients";
 import CaseTable from "@cases/components/CaseList/CaseTable/CaseTable";
-import { usePagination } from "@cases/hooks/usePagination";
 import { mockCases } from "@cases/utils/mockCases";
 import { MedicalStatus } from "@cases/types";
+import { useFilterStore } from "@cases/store/filterStore";
 import styles from "./CaseListPage.module.css";
 
 export const CaseListPage = () => {
   const {
-    pagination,
-    search,
-    filter,
-    items: paginatedCases,
-  } = usePagination({ items: mockCases });
+    searchTerm,
+    setSearchTerm,
+    statusFilter,
+    setStatusFilter,
+    currentPage,
+    setCurrentPage,
+    getFilteredAndPaginatedItems,
+  } = useFilterStore();
+
+  const { items: paginatedCases, totalPages } =
+    getFilteredAndPaginatedItems(mockCases);
 
   return (
     <div className={styles.container}>
       <CaseSearchClients
-        searchTerm={search.term}
-        setSearchTerm={search.setTerm}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
       />
       <CaseButtons
-        statusFilter={filter.status as "All" | MedicalStatus}
-        setStatusFilter={filter.setStatus}
+        statusFilter={statusFilter as "All" | MedicalStatus}
+        setStatusFilter={setStatusFilter}
       />
       <CaseTable filteredCases={paginatedCases} />
       <CasePagination
-        currentPage={pagination.currentPage}
-        totalPages={pagination.totalPages}
-        onPageChange={pagination.handlePageChange}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
       />
     </div>
   );
