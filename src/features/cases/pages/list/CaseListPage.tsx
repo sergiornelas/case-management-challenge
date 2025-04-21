@@ -1,11 +1,10 @@
+import CaseButtons from "@cases/components/CaseList/CaseButtons/CaseButtons";
+import CasePagination from "@cases/components/CaseList/CasePagination/CasePagination";
+import CaseSearchClients from "@cases/components/CaseList/CaseSearchClients/CaseSearchClients";
+import CaseTable from "@cases/components/CaseList/CaseTable/CaseTable";
+import { MedicalStatus } from "@cases/types";
 import { useState } from "react";
-import CaseButtons from "../../components/CaseList/CaseButtons/CaseButtons";
-import { CasePagination } from "../../components/CaseList/CasePagination/CasePagination";
-import CaseSearchClients from "../../components/CaseList/CaseSearchClients/CaseSearchClients";
-import { CaseTable } from "../../components/CaseList/CaseTable/CaseTable";
 import styles from "./CaseListPage.module.css";
-
-type MedicalStatus = "Active" | "Pending" | "In Progress";
 
 // Temporary mock data until we set up Zustand
 import { mockCases } from "../../utils/mockCases";

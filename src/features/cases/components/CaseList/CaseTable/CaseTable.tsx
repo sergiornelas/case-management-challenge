@@ -1,8 +1,8 @@
-import styles from "./CaseTable.module.css";
+import { Case } from "@cases/types";
 import { useNavigate } from "react-router-dom";
-import { Case } from "../../../types";
+import styles from "./CaseTable.module.css";
 
-export const CaseTable = ({ filteredCases }) => {
+export default function CaseTable({ filteredCases }) {
   const navigate = useNavigate();
   return (
     <div className={styles.tableWrapper}>
@@ -38,4 +38,4 @@ export const CaseTable = ({ filteredCases }) => {
       </table>
     </div>
   );
-};
+}

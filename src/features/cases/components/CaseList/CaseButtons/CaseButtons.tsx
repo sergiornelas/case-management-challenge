@@ -1,5 +1,5 @@
 import styles from "./CaseButtons.module.css";
-type MedicalStatus = "Active" | "Pending" | "In Progress";
+import { MedicalStatus } from "@cases/types";
 
 export default function CaseButtons({ statusFilter, setStatusFilter }) {
   return (

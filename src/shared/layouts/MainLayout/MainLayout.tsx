@@ -1,6 +1,6 @@
+import { Header } from "@shared/layouts/Header/Header";
+import { Sidebar } from "@shared/layouts/Sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
-import { Sidebar } from "../Sidebar/Sidebar";
-import { Header } from "../Header/Header";
 import styles from "./MainLayout.module.css";
 
 export const MainLayout = () => {

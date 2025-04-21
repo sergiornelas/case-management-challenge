@@ -12,8 +12,8 @@ export const CaseDetailPage = () => {
         <h2>Case Details</h2>
       </header>
       <div className={styles.content}>
-        <CaseDetails caseId={id!} />
-        <CaseExpenses caseId={id!} />
+        {/* <CaseDetails caseId={id!} /> */}
+        {/* <CaseExpenses caseId={id!} /> */}
       </div>
     </div>
   );

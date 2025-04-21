@@ -1,7 +1,7 @@
+import { CaseDetailPage } from "@cases/pages/detail/CaseDetailPage";
+import { CaseListPage } from "@cases/pages/list/CaseListPage";
+import { MainLayout } from "@shared/layouts/MainLayout/MainLayout";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { MainLayout } from "./shared/layouts/MainLayout/MainLayout";
-import { CaseListPage } from "./features/cases/pages/list/CaseListPage";
-import { CaseDetailPage } from "./features/cases/pages/detail/CaseDetailPage";
 
 const router = createBrowserRouter([
   {

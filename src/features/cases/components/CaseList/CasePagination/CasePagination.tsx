@@ -1,6 +1,6 @@
 import styles from "./CasePagination.module.css";
 
-export const CasePagination = () => {
+export default function CasePagination() {
   return (
     <div className={styles.pagination}>
       <button className={styles.paginationButton}>&lt;</button>
@@ -13,4 +13,4 @@ export const CasePagination = () => {
       <button className={styles.paginationButton}>&gt;</button>
     </div>
   );
-};
+}
