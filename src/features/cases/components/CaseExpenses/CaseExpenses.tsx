@@ -1,13 +1,22 @@
 import styles from "./CaseExpenses.module.css";
 import { expenses } from "@cases/utils/mockExpenses";
+import { useState } from "react";
+import AddExpenseModal from "./AddExpenseModal";
 
 export default function CaseExpenses() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div>
       <div className={styles.header}>
         <div className={styles.actions}>
           <button className={styles.deleteButton}>Delete</button>
-          <button className={styles.addButton}>Add Expense</button>
+          <button
+            className={styles.addButton}
+            onClick={() => setIsModalOpen(true)}
+          >
+            Add Expense
+          </button>
         </div>
       </div>
       <table className={styles.table}>
@@ -35,6 +44,10 @@ export default function CaseExpenses() {
           ))}
         </tbody>
       </table>
+      <AddExpenseModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }

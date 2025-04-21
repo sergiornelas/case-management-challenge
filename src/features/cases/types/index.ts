@@ -31,3 +31,8 @@ export interface CaseButtonsProps {
   statusFilter: MedicalStatus | "All";
   setStatusFilter: (status: MedicalStatus | "All") => void;
 }
+
+export interface AddExpenseModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
