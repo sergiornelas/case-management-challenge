@@ -1,0 +1,32 @@
+.container {
+  padding: 20px;
+}
+
+.field {
+  margin-bottom: 24px;
+}
+
+.field label {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.value {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.caseNumber {
+  margin-top: 4px;
+  color: #666;
+  font-size: 14px;
+}

@@ -1,6 +1,6 @@
 export type MedicalStatus = "Ready for Assignment" | "Signed" | "Scheduled";
-
 export type CaseStatus = "Active" | "Pending" | "In Progress";
+export type DetailsTab = "details" | "expenses";
 
 export type Case = {
   id: string;
