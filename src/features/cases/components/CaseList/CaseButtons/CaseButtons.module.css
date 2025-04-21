@@ -1,0 +1,24 @@
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listButton {
+  text-align: center;
+  border-radius: 99px;
+  border: 0;
+  background-color: #d1c8ef;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.81rem;
+  color: #8374cc;
+  cursor: pointer;
+  min-width: 150px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  appearance: none;
+}
+
+.listButton:hover {
+  background-color: #bfb5e1;
+  transition: background-color 0.2s;
+}

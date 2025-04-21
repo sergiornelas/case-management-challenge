@@ -1,7 +1,10 @@
-.page {
-  border-radius: 12px;
-  box-shadow: 2px 8px 40px rgba(50, 136, 252, 0.15);
-  background-color: white;
-  padding: 24px;
-  margin: 24px;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 1rem;
+  margin-left: 1.43rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 1px 0 8px rgba(99, 102, 241, 0.2);
 }
